@@ -13,13 +13,18 @@ EGIT_REPO_URI="https://github.com/ActivityWatch/aw-server-rust"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 
-DEPEND=""
+DEPEND="sys-devel/gcc"	# Dynamically linked to it
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_unpack() {
 	git-r3_src_unpack $*
-	cargo_gen_config
+	cargo_live_src_unpack
+}
+
+src_install() {
+	cargo_src_install --path aw-server
+	cargo_src_install --path aw-sync
 }
