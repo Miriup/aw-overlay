@@ -9,12 +9,8 @@ PYTHON_COMPAT=( python3_{10..13} )
 inherit distutils-r1 pypi git-r3
 
 DESCRIPTION="Cross-platform window-Watcher for Linux (X11), macOS, Windows."
-HOMEPAGE="
-	https://pypi.org/project/aw-watcher-window/
-"
+HOMEPAGE="https://pypi.org/project/aw-watcher-window"
 EGIT_REPO_URI="https://github.com/ActivityWatch/aw-watcher-window"
-SRC_URI=""
-S="${WORKDIR}/${P}"
 
 LICENSE=""
 SLOT="0"
